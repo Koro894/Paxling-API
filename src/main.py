@@ -2,14 +2,7 @@ from fastapi import FastAPI
 from src.api import main_rut
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
-# from authx import AuthX, AuthXConfig
-#
-# config = AuthXConfig()
-# config.JWT_SECRET_KEY = "M#it:a_||Hi0922/lo"
-# config.JWT_ACCESS_COOKIE_NAME = 'Mila'
-# config.JWT_TOKEN_LOCATION = ['cookies']
-#
-# security = AuthX(config=config)
+
 
 app = FastAPI()
 
@@ -35,6 +28,7 @@ app.include_router(main_rut)
 # host="0.0.0.0"
 if __name__ == "__main__":
     uvicorn.run("src.main:app", reload=True, port=8010)
+
 
 
 
